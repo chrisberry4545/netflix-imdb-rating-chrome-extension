@@ -1,4 +1,4 @@
-if (window.location.href.includes('netflix')) {
+if (window.location.href.includes('https://www.netflix')) {
   let currentTitle = null;
   const initRatingDiv = () => {
     const div = document.createElement('div');
