@@ -2,7 +2,16 @@ if (window.location.href.includes('https://www.netflix')) {
   let currentTitle = null;
   const initRatingDiv = () => {
     const div = document.createElement('div');
-    div.style = 'background-color: #FFF; padding: 0.5rem; position: fixed; top: 0; right: 0; z-index: 9999;'
+    div.style = `
+      background-color: #FFF;
+      padding: 0.5rem;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 9999;
+      opacity: 0.9;
+      pointer-events: none;
+    `;
     document.body.appendChild(div);
     return div;
   };
@@ -10,7 +19,7 @@ if (window.location.href.includes('https://www.netflix')) {
   const updateRatingDiv = (title, rating) => {
     ratingDiv.innerHTML = `
     <span style="color: #000">
-      ${title || 'Unknown'} IMDB Rating: ${rating || 'unknown'}
+      ${title || 'Unknown'}: ${rating || 'unknown'}
     </span>`;
   };
 
